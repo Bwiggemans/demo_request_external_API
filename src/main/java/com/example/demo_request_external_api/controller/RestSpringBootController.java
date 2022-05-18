@@ -26,12 +26,22 @@ public class RestSpringBootController {
 
     @GetMapping(value = "/countries")
     public List<Object> getCountries(){
-        String url = "https://restcountries.eu/rest/v2/all";
+        String url = "https://restcountries.com/v2/all";
         RestTemplate restTemplate = new RestTemplate();
 
         Object[] countries = restTemplate.getForObject(url, Object[].class);
 
         return Arrays.asList(countries);
+
+    }
+    @GetMapping(value = "/persons")
+    public List<Object> getPersons(){
+        String url = "https://swapi.dev/api/people";
+        RestTemplate restTemplate = new RestTemplate();
+
+        Object[] persons = restTemplate.getForObject(url, Object[].class);
+
+        return Arrays.asList(persons);
 
     }
 }
