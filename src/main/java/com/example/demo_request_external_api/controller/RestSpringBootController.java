@@ -39,7 +39,7 @@ public class RestSpringBootController {
         String url = "https://swapi.dev/api/people";
         RestTemplate restTemplate = new RestTemplate();
 
-        Object[] persons = restTemplate.getForObject(url, Object[].class);
+        Object persons = restTemplate.getForObject(url, Object.class);
 
         return Arrays.asList(persons);
 
