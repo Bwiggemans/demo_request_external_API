@@ -32,8 +32,8 @@ public class RestSpringBootController {
         Object[] countries = restTemplate.getForObject(url, Object[].class);
 
         return Arrays.asList(countries);
-
     }
+
     @GetMapping(value = "/persons")
     public List<Object> getPersons(){
         String url = "https://swapi.dev/api/people";
@@ -42,6 +42,5 @@ public class RestSpringBootController {
         Object persons = restTemplate.getForObject(url, Object.class);
 
         return Arrays.asList(persons);
-
     }
 }
