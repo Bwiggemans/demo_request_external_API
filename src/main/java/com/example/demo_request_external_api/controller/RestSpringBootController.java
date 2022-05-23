@@ -44,21 +44,17 @@ public class RestSpringBootController {
         return Arrays.asList(persons);
     }
 
-    @GetMapping(value = "/persons{id}")
-    public List<Object> getPerson(@PathVariable int id){
+    @GetMapping(value = "/persons")
+    public List<Object> getPerson(){
         String url = "https://swapi.dev/api/people";
         RestTemplate restTemplate = new RestTemplate();
 
         Object persons = restTemplate.getForObject(url, Object.class);
 
-        return getPerson(id);
-//        return Arrays.asList(persons);
-
+        return Arrays.asList(persons);
     }
 
-
-
-//    @GetMapping(value = "/books/{id}")
+    //    @GetMapping(value = "/books/{id}")
 //    public ResponseEntity<Object> getBook(@PathVariable int id) {
 //        return ResponseEntity.ok(bookService.getBook(id));
 //    }
