@@ -44,15 +44,15 @@ public class RestSpringBootController {
         return Arrays.asList(persons);
     }
 
-    @GetMapping(value = "/persons")
-    public List<Object> getPerson(){
-        String url = "https://swapi.dev/api/people";
-        RestTemplate restTemplate = new RestTemplate();
-
-        Object persons = restTemplate.getForObject(url, Object.class);
-
-        return Arrays.asList(persons);
-    }
+//    @GetMapping(value = "/persons")
+//    public List<Object> getPerson(){
+//        String url = "https://swapi.dev/api/people";
+//        RestTemplate restTemplate = new RestTemplate();
+//
+//        Object persons = restTemplate.getForObject(url, Object.class);
+//
+//        return Arrays.asList(persons);
+//    }
 
     //    @GetMapping(value = "/books/{id}")
 //    public ResponseEntity<Object> getBook(@PathVariable int id) {
